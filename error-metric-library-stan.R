@@ -64,7 +64,7 @@ root.median.squared.error=function(theta,x)           # theta: candidate summary
 max.absolute.error=function(theta,x)                  # theta: candidate summary value; x: numeric data vector
 {
   input.ok(theta,x)                                   # check for valid input
-  res=max((x-theta),na.rm=T)                          # formula for max absolute error
+  res=max(abs(x-theta),na.rm=T)                          # formula for max absolute error
   return(res)                                         # return result
 }
 
